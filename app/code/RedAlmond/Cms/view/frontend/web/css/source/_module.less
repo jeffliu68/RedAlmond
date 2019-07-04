@@ -1,0 +1,62 @@
+// Color variables
+@color0: #ffffff;
+@color1: #6c56cb;
+@color2: #0168cc;
+@color3: #cc9402;
+
+.grid {
+  .col {
+    button {
+      border: none;
+      color: @color0;
+      cursor: pointer;
+      margin: 2em auto;
+      padding: 1em 1.5em;
+      position: relative;
+      text-transform: uppercase;
+      &:after {
+        border-style: solid;
+        border-width: 10px 10px 0 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        right: 0;
+      }
+      &:hover {
+        color: #000000;
+        outline-offset: -3px;
+        border: none;
+      }
+    }
+    button.primary.tocart {
+      background: #886CFE;
+      &:after {
+        border-color: @color1 @color0;
+      }
+      &:hover {
+        background: @color0;
+        outline: 3px solid @color1;
+      }
+    }
+    button.btn-continue {
+      background: #0283FF;
+      &:after {
+        border-color: @color2 @color0;
+      }
+      &:hover {
+        background: @color0;
+        outline: 3px solid @color2;
+      }
+    }
+    button.action.primary.checkout {
+      background: #FFB903;
+      &:after {
+        border-color: @color3 @color0;
+      }
+      &:hover {
+        background: @color0;
+        outline: 3px solid @color3;
+      }
+    }
+  }
+}
